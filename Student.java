@@ -2,7 +2,12 @@ public class Student{
     int sid;
     String sname;
     double gpa;
-    static String university="Standford";
+    static String university;
+
+    static{//static block to initialize static variable--executed during class loading
+        university="IIT";
+        System.out.println("Static block executed before main method");
+    }
 
     void setStudent(int id, String name, double avg){
         sid=id;
@@ -11,7 +16,9 @@ public class Student{
     }
 
     void getStudent(){
-        System.out.println(sid+" "+sname+" "+gpa);
+        System.out.println(sid+" "+sname+" "+gpa+" "+university);
     }
-
+    public static void change(){
+        university="MIT";
+    }
 }
