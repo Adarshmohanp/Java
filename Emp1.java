@@ -6,7 +6,7 @@ public class Emp1{//fully encapsulated class
     private double basic;//basic salary
     private static String org="Google";
 
-    public void setEmp(int eid, String ename, double basic) {
+    public Emp1(int eid, String ename, double basic) {
         this.eid = eid;
         this.ename = ename;
         this.basic = basic;
