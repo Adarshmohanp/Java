@@ -1,0 +1,23 @@
+import java.io.*;
+public class ReadWrite15{
+    public static void main(String[]args) throws IOException{
+
+        FileReader fr=new FileReader("ReadWrite15.java");
+        FileWriter fw=new FileWriter("CopyReadWrite15.txt");
+
+
+        int i;
+        int count=0;
+        while((i=fr.read())!=-1){
+            fw.write(i);
+            System.out.print((char)i);
+            count++;
+        }
+        fw.write("\nTotal characters: " + count);
+        System.out.println("\nFile copied successfully.");
+
+        fr.close();
+        fw.close();
+    }
+}
+Total lines: 22
