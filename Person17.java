@@ -2,7 +2,7 @@ import java.io.Serializable;
 public class Person17 implements Serializable{
     private String name;
     private int age;
-    private long aadhar;
+    transient private long aadhar;//cann't be serialized by using keyword transient
 
     public Person17(String name, int age, long aadhar){
         this.name=name;
